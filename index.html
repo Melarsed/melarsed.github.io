@@ -1,10 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Sırra Kadem</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sırra Kadem - Fal ve Astroloji</title>
+    <!-- Modern Yazı Tipleri -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A0A12;
+            --accent-gold: #D4AF37;
+            --accent-teal: #00BFA5;
+            --text-main: #FFFFFF;
+            --text-secondary: #B0B0B0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: radial-gradient(circle at center, #1A1625 0%, #0A0A12 100%);
+        }
+
+        /* Arka Plan Yıldız Efekti */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 4px;
+            background: linear-gradient(to right, #D4AF37, #FFD700, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-teal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-teal), #00796B);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 191, 165, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 191, 165, 0.5);
+        }
+
+        .footer {
+            margin-top: 5rem;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #222;
+            padding-top: 2rem;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Kart Efekti */
+        .glow {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: url('https://play-lh.googleusercontent.com/F_rL09O6X8i9O6-8X7W3H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H_H=s200') no-repeat center; /* Kendi ikonunuz gelirse buraya koyabilirsiniz */
+            background-color: #1A1625;
+            border-radius: 20%;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glow::after {
+            content: "✨";
+            font-size: 3rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Sırra Kadem - Resmi Web Sitesi</h1>
-    <p>Uygulamamız Google Play Store'da yayındadır.</p>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <div class="glow"></div>
+        <h1>SIRRA KADEM</h1>
+        <div class="subtitle">Geleceğinize Işık Tutun</div>
+        
+        <p class="description">
+            Kahve falından el falına, tarot analizinden günlük burç yorumlarına kadar tüm mistik kapılar burada açılıyor. Bilgeliğin ve gizemin dünyasına hoş geldiniz.
+        </p>
+
+        <a href="https://play.google.com/store/apps/details?id=com.sirrakadem.app" class="cta-button" target="_blank">
+            Google Play'den İndir
+        </a>
+
+        <div class="footer">
+            <p>&copy; 2024 Sırra Kadem. Tüm hakları saklıdır.</p>
+            <p>
+                <a href="#">Gizlilik Politikası</a> | 
+                <a href="#">Kullanım Şartları</a> | 
+                <a href="/app-ads.txt">app-ads.txt</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
